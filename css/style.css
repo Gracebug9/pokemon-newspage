@@ -1,0 +1,149 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #9D0208;
+    background-color: #EF233C;
+}
+
+body {
+    background-color: #E5E5E5
+}
+
+nav ul {
+    list-style-type: none; 
+    display: flex;
+    gap: 20px;
+    background-color: #000000;
+    height: 60px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 3:1 ratio between content and main */
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #D7263D;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #495057;
+    color: #FF686B;
+}
+
+footer {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text for smaller screens */
+}
+
+.article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    color: #219EBC;
+    background-color: #023E8A;
+}
+
+.article-content {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px;
+    padding: 20px;
+    background-color: #ADE8F4;
+    color: #5390D9;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #90E0FF;
+    color: #4361EE
+}
+
+.advertisement {
+    padding: 10px;
+    border: 3px solid #5A189A;
+    text-align: center;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a reponsive grid */
+    gap: 20px;
+    padding: 20px;
+    background-color: #7B2CBF;
+}
+
+.photo.img {
+    width: 100%; /* Ensure images are fully responsive within their containers */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.photo-gallery img {
+    width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add some rounding */
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center navigation items */
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Adjust gap between navigation items */
+}
+
+/* Hamburger Menu Style */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Hide regular navigation items on smaller screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none; /*Initially dide navigation items */
+    }
+
+    /* When clicking the hamburger menu, use JavaScript to toggle this class to display the items */
+    nav ul.active {
+        display: flex; /* Display navigation items in a column */
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+}

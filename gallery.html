@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet"href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>PokePage</h1>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="photo-gallery">
+        <div class="photo"><img src="images/Pictures/Shiny-Charizard.png" alt="A Shiny Charizrd in a grey background"></div>
+        <div class="photo"><img src="images/Pictures/Grass-Starters.jpg" alt="The grass starters hanging out with each other in a bamboo forest"></div>
+        <div class="photo"><img src="images/Pictures/Water-Starters.jpg" alt="The water starters are hanging out swimming in an ocean"></div>
+        <div class="photo"><img src="images/Pictures/Mega-Rayquazza.jpg" alt="Mega Rayquazza roaring and soaringa above the clouds"></div>
+        <!-- Repeat for each photo -->
+         <div class="gallery-controls">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+         </div>
+     </main>
+    <!-- Navigation Controls will go here -->
+    <!-- Main Content and Footer will go here -->
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function(){
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
